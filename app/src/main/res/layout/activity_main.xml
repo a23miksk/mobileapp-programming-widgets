@@ -37,5 +37,11 @@
             android:text="Shuffle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/myNewEdt"
+            android:hint="Add text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
