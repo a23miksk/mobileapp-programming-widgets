@@ -32,19 +32,26 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/myShflBtn"
-            android:text="Shuffle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20px"/>
-
-        <EditText
-            android:id="@+id/myNewEdt"
-            android:hint="Add text"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20px"/>
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:id="@+id/myNewEdt"
+                android:hint="Add text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"/>
+            <Button
+                android:id="@+id/myShflBtn"
+                android:text="Shuffle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"/>
+        </LinearLayout>
+
+
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
