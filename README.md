@@ -47,7 +47,7 @@ Lade slutligen till en ImageView widget med en bild på en katt för att vara s�
 ```
 Kod som hittar Button-widgeten med sitt id och sätter en OnClickListener på den. Sedan använder den sig av OnClick för att shuffla värdet på EditText och sätta det till värdet på TextView.  
 Shuffler är en metod som gör om alla karaktärer i en given string till element i en array. Sedan använder den sig av Collections.shuffle för att "shuffla" värdenas position i arrayen.  
-Slutligen används StringBuilder för att sätta tillbaka elementen i arrayen till en string som returnas.
+Slutligen används StringBuilder för att sätta tillbaka elementen i arrayen till en string som returnas.  
 
 # Bild på appen
 ![Screenshot.png](Screenshot.png)
