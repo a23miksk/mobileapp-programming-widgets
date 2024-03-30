@@ -25,29 +25,30 @@ public class MainActivity extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("==>","Button clicked");
+                Log.d("==>", "Button clicked");
                 TextView textViewToShuffle = (TextView) findViewById(R.id.textToShfl);
                 EditText myNewEditText = (EditText) findViewById(R.id.myNewEdt);
-                CharSequence textFromEditText = myNewEditText.getText();
-                textViewToShuffle.setText(textFromEditText);
+                String textFromEditText = myNewEditText.getText().toString();
+                textViewToShuffle.setText("Your text shuffled: " + shuffler(textFromEditText));
             }
         });
     }
-public String shuffler (String textToShuffle){
-    List<Character> charactersToShuffle = new ArrayList<>();
 
-    for (char i : textToShuffle.toCharArray()) {
-        charactersToShuffle.add(i);
+    public String shuffler(String textToShuffle) {
+        List<Character> charactersToShuffle = new ArrayList<>();
+
+        for (char i : textToShuffle.toCharArray()) {
+            charactersToShuffle.add(i);
+        }
+
+        Collections.shuffle(charactersToShuffle);
+
+        StringBuilder backToString = new StringBuilder();
+        for (char i : charactersToShuffle) {
+            backToString.append(i);
+        }
+
+        return backToString.toString();
     }
-
-    Collections.shuffle(charactersToShuffle);
-
-    StringBuilder backToString = new StringBuilder();
-    for (char i : charactersToShuffle) {
-        backToString.append(i);
-    }
-
-    return backToString.toString();
-}
 
 }
